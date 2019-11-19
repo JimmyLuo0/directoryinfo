@@ -9,7 +9,7 @@
 #include <fcntl.h>
 
 int main(int argc, char *argv[]){
-	DIR *stream = opendir(".");
+	DIR *stream = opendir(argv[1]);
 	if (stream == NULL){
 		printf("error: %d, message: %s\n", errno, strerror(errno));
 		return 0;
